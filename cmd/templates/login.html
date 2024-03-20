@@ -6,10 +6,74 @@
 </head>
 <body>
 <form action="/proceed" method="post">
+    <p><label for="textareainput">Input TextArea:</label></p>
+    <textarea id="textareainput" name="textareainput" rows="5" cols="50"></textarea>
+    <br>
+    <input type="submit" value="submit">
+</form>
+<br>
+<br>
+<form action="/proceed" method="post">
+    <fieldset>
+        <legend>Input Radio:</legend>
+        <div>
+            <input type="radio" id="oneradio" name="oneradio" value="First" checked />
+            <label for="oneradio">First</label>
+        </div>
+
+        <div>
+            <input type="radio" id="tworadio" name="oneradio" value="Second" />
+            <label for="tworadio">Second</label>
+        </div>
+        <div>
+            <input type="radio" id="threeradio" name="oneradio" value="Third" />
+            <label for="threeradio">Third</label>
+        </div>
+        <div>
+            <button type="submit" value="submit">Submit</button>
+        </div>
+    </fieldset>
+</form>
+<br>
+<br>
+<form action="/proceed" method="post">
+    <label for="selectinput">Input Select:</label>
+    <select name="selectinput" id="selectinput">
+        <option value="One">One</option>
+        <option value="Two">Two</option>
+        <option value="Three">Three</option>
+        <option value="Four">Four</option>
+    </select>
+    <input type="submit" value="submit">
+</form>
+<br>
+<br>
+<form action="/proceed" method="post">
+    <label class="input-file">
+        <input type="file" name="file">
+        <span class="input-file-btn">Выберите файл</span>
+        <span class="input-file-text">Максимум 10мб</span>
+    </label>
+    <input type="submit" value="submit">
+</form>
+<br>
+<br>
+<form action="/proceed" method="post">
+    <div>
+        <label for="titlenothidden">Input not hiddent:</label>
+        <input type="text" id="titlenothidden" name="titlenothidden" value="titlenothidden" />
+    </div>
+    <div>
+        <button type="submit" value="submit">submit</button>
+    </div>
+    <input type="hidden" id="postId" name="postId" value="34657" />
+</form>
+<br>
+<br>
+<form action="/proceed" method="post">
+    <label>Input Simple:</label>
     <label for="user">Username</label><input type="text" name="username" id="user" placeholder="Username">
-
     <label for="pass">Password</label><input type="text" name="password" id="pass" placeholder="Password">
-
     <input type="submit">
 </form>
 </body>
