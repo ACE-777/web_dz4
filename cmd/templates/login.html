@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href = "style_login.css">
 </head>
 <body>
-<form action="/proceed" method="post">
+<form action="/proceed" method="post" enctype="multipart/form-data">
     <p><label for="textareainput">Input TextArea:</label></p>
     <textarea id="textareainput" name="textareainput" rows="5" cols="50"></textarea>
     <br>
@@ -19,7 +19,7 @@
 </form>
 <br>
 <br>
-<form action="/proceed" method="post">
+<form action="/proceed" method="post" enctype="multipart/form-data">
     <fieldset>
         <legend>Input Radio:</legend>
         <div>
@@ -42,7 +42,7 @@
 </form>
 <br>
 <br>
-<form action="/proceed" method="post">
+<form action="/proceed" method="post" enctype="multipart/form-data">
     <label for="selectinput">Input Select:</label>
     <select name="selectinput" id="selectinput">
         <option value="One">One</option>
@@ -54,7 +54,7 @@
 </form>
 <br>
 <br>
-<form action="/proceed" method="post">
+<form action="/proceed" method="post" enctype="multipart/form-data">
     <label class="input-file">
         <input type="file" name="file">
         <span class="input-file-btn">Выберите файл</span>
@@ -64,7 +64,7 @@
 </form>
 <br>
 <br>
-<form action="/proceed" method="post">
+<form action="/proceed" method="post" enctype="multipart/form-data">
     <div>
         <label for="titlenothidden">Input not hiddent:</label>
         <input type="text" id="titlenothidden" name="titlenothidden" value="titlenothidden" />
@@ -76,7 +76,7 @@
 </form>
 <br>
 <br>
-<form action="/proceed" method="post">
+<form action="/proceed" method="post" enctype="multipart/form-data">
     <label>Input Simple:</label>
     <label for="user">Username</label><input type="text" name="username" id="user" placeholder="Username">
     <label for="pass">Password</label><input type="text" name="password" id="pass" placeholder="Password">

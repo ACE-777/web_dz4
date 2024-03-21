@@ -1,9 +1,12 @@
 package internal
 
 import (
+	"fmt"
 	"html/template"
 	"log"
+	"mime/multipart"
 	"net/http"
+	"strconv"
 )
 
 type Cred struct {
@@ -15,6 +18,7 @@ type Cred struct {
 	FileInput      string
 	NotHiddenInput string
 	HiddenInput    string
+	FileInputSize  string
 }
 
 func login(w http.ResponseWriter, r *http.Request) {
@@ -38,6 +42,14 @@ func login(w http.ResponseWriter, r *http.Request) {
 }
 
 func proceed(w http.ResponseWriter, r *http.Request) {
+	var (
+		fileName  string
+		fileSize  string
+		handler   *multipart.FileHeader
+		fileInput multipart.File
+		err       error
+	)
+
 	if r.Method != http.MethodPost {
 		http.Error(w, "method must be POST", http.StatusNotFound)
 	}
@@ -48,29 +60,29 @@ func proceed(w http.ResponseWriter, r *http.Request) {
 	selectinput := r.FormValue("selectinput")
 	nothiddeninput := r.FormValue("titlenothidden")
 	hiddeninput := r.FormValue("postId")
-	//_, fileiInput, err := r.FormFile("file")
-	//if err != nil {
-	//	log.Printf("can not parse file from input:%v", err)
-	//}
-	//fileiInput := r.FormValue("file")
-	//twoRadio := r.FormValue("tworadio")
-	//threeRadio := r.FormValue("threeradio")
+	fileInput, handler, err = r.FormFile("file")
+	if err != nil {
+		if err == http.ErrMissingFile {
+			fileName = ""
+			fileSize = "0"
+		} else {
+			http.Error(w, fmt.Sprintf("Ошибка при получении файла: %s", err), http.StatusBadRequest)
+			return
+		}
+	} else {
+		fileName = handler.Filename
+		fileSize = strconv.Itoa(int(handler.Size))
+		defer fileInput.Close()
+	}
 
-	//decode := json.NewDecoder(r.Body)
-	//decode.DisallowUnknownFields()
-	//
-	//var cred Cred
-	//
-	//if err := decode.Decode(&cred); err != nil {
-	//	http.Error(w, "can not decode input data", http.StatusBadRequest)
-	//}
 	var cred = Cred{
-		Username:      username,
-		Password:      password,
-		TextareaInput: textareaInput,
-		OneRadio:      oneRadio,
-		SelectInput:   selectinput,
-		//FileInput:     fileiInput.Filename,
+		Username:       username,
+		Password:       password,
+		TextareaInput:  textareaInput,
+		OneRadio:       oneRadio,
+		SelectInput:    selectinput,
+		FileInput:      fileName,
+		FileInputSize:  fileSize,
 		NotHiddenInput: nothiddeninput,
 		HiddenInput:    hiddeninput,
 	}
