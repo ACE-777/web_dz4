@@ -2,11 +2,12 @@ package main
 
 import (
 	"log"
-	"web_dz4/internal"
+
+	server_logic "web_dz4/internal/server_logic"
 )
 
 func main() {
-	err := internal.StartServer()
+	err := server_logic.StartServer()
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}

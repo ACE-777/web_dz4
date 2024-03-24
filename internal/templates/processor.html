@@ -1,0 +1,41 @@
+<!Doctype html>
+<html lang="eu">
+<head>
+    <title>Processor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="crhome=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href = "../static/style_login.css">
+</head>
+<body>
+<div class="container">
+    <div class="item">
+        Ответ TextArea:
+        <b>{{.TextareaInput}}</b>
+    </div>
+    <div class="item">
+        Ответ Radio:
+        <b>{{.OneRadio}} </b>
+    </div>
+    <div class="item">
+        Ответ Select:
+        <b>{{.SelectInput}}</b>
+    </div>
+    <div class="item">
+        Ответ File:
+        <b>{{.FileInput}}</b> и размер: <b>{{.FileInputSize}} byte</b>
+    </div>
+    <div class="item">
+        Ответ Hidden и notHidden:
+        <b>{{.HiddenInput}} {{.NotHiddenInput}}</b>
+    </div>
+    <div class="item">
+        Ответ Simple:
+        <b>{{.Username}} {{.Password}}</b>
+    </div>
+</div>
+</body>
+</html>

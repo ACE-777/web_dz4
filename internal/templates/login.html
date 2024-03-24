@@ -1,0 +1,95 @@
+<!Doctype html>
+<html lang="eu">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="crhome=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href = "../static/style_login.css">
+</head>
+<body >
+<div class="container">
+    <div class="item">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <p><label for="textareainput" class="head">Input TextArea:</label></p>
+            <textarea id="textareainput" name="textareainput" rows="5" cols="50"></textarea>
+            <button class="allButton" type="submit" value="submit">submit</button>
+            <button class="allButton" type="reset" value="reset">reset</button>
+        </form>
+    </div>
+    <div class="item">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend class="head">Input Radio:</legend>
+                <div>
+                    <input type="radio" id="oneradio" name="oneradio" value="First" required />
+                    <label for="oneradio">First</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="tworadio" name="oneradio" value="Second" required />
+                    <label for="tworadio">Second</label>
+                </div>
+                <div>
+                    <input type="radio" id="threeradio" name="oneradio" value="Third" required />
+                    <label for="threeradio">Third</label>
+                </div>
+                <div>
+                    <button class="allButton" type="submit" value="submit">submit</button>
+                    <button class="allButton" type="reset" value="reset">reset</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="item">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <label for="selectinput" class="head">Input Select:</label>
+            <select name="selectinput" id="selectinput" required>
+                <option value="One">One</option>
+                <option value="Two">Two</option>
+                <option value="Three">Three</option>
+                <option value="Four">Four</option>
+            </select>
+            <button class="allButton" type="submit" value="submit">submit</button>
+            <button class="allButton" type="reset" value="reset">reset</button>
+        </form>
+    </div>
+    <div class="item">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <label class="input-file">
+                <input type="file" name="file">
+                <span class="input-file-btn" >Выберите файл</span>
+                <span class="input-file-text"></span>
+            </label>
+            <button class="allButton" type="submit" value="submit">submit</button>
+            <button class="allButton" type="reset" value="reset">reset</button>
+        </form>
+    </div>
+    <div class="item">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="titlenothidden" class="head">Input not hiddent:</label>
+                <input type="text" id="titlenothidden" name="titlenothidden" value="" autocomplete="off"/>
+            </div>
+            <div>
+                <button class="allButton" type="submit" value="submit">submit</button>
+                <button class="allButton" type="reset" value="reset">reset</button>
+            </div>
+            <input type="hidden" id="postId" name="postId" value="34657" />
+        </form>
+    </div>
+    <div class="item">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <label class="head">Input Simple:</label>
+            <label for="user">Username</label><input type="text" name="username" id="user" placeholder="Username" required>
+            <label for="pass">Password</label><input type="password" name="password" id="pass" placeholder="Password" required>
+            <button class="allButton" type="submit" value="submit">submit</button>
+            <button class="allButton" type="reset" value="reset">reset</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

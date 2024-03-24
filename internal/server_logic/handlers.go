@@ -1,8 +1,7 @@
-package internal
+package server_logic
 
 import (
 	"fmt"
-	"html/template"
 	"log"
 	"mime/multipart"
 	"net/http"
@@ -25,15 +24,8 @@ func login(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		http.Error(w, "method must be GET", http.StatusNotFound)
 	}
-
-	file, err := template.ParseFiles("cmd/templates/login.html")
-	if err != nil {
-		log.Printf("Can not render login page: %v", err)
-	}
-
-	err = file.Execute(w, nil)
-	if err != nil {
-		log.Printf("Can not execute template: %v", err)
+	if err := tmpl.ExecuteTemplate(w, "login.html", nil); err != nil {
+		log.Fatalf("can not execute template login: %v", err)
 	}
 
 	w.WriteHeader(http.StatusOK)
@@ -87,16 +79,10 @@ func proceed(w http.ResponseWriter, r *http.Request) {
 		HiddenInput:    hiddeninput,
 	}
 
-	file, err := template.ParseFiles("cmd/templates/processor.html")
-	if err != nil {
-		log.Printf("Can not render login page: %v", err)
+	if err = tmpl.ExecuteTemplate(w, "processor.html", cred); err != nil {
+		log.Fatalf("can not execute template proceed: %v", err)
 	}
 
-	err = file.Execute(w, cred)
-	if err != nil {
-		log.Printf("Can not execute template: %v", err)
-	}
-	http.RedirectHandler("/auth", http.StatusOK)
 	w.WriteHeader(http.StatusOK)
 
 	return
