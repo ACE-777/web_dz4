@@ -20,7 +20,7 @@ func StartServer() (err error) {
 	http.HandleFunc("/proceed", proceed)
 
 	log.Println("server run on 9000 port")
-	err = http.ListenAndServe("localhost:9000", nil)
+	err = http.ListenAndServe(":9000", nil)
 
 	return
 }

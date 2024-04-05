@@ -15,7 +15,7 @@
     <div class="item">
         <form action="/proceed" method="post" enctype="multipart/form-data">
             <p><label for="textareainput" class="head">Input TextArea:</label></p>
-            <textarea id="textareainput" name="textareainput" rows="5" cols="50"></textarea>
+            <textarea id="textareainput" name="textareainput" rows="5" cols="40"></textarea>
             <button class="allButton" type="submit" value="submit">submit</button>
             <button class="allButton" type="reset" value="reset">reset</button>
         </form>
@@ -72,7 +72,7 @@
         <form action="/proceed" method="post" enctype="multipart/form-data">
             <div>
                 <label for="titlenothidden" class="head">Input not hiddent:</label>
-                <input type="text" id="titlenothidden" name="titlenothidden" value="" autocomplete="off"/>
+                <input type="text" id="titlenothidden" name="titlenothidden" value="" autocomplete="on"/>
             </div>
             <div>
                 <button class="allButton" type="submit" value="submit">submit</button>
@@ -88,6 +88,37 @@
             <label for="pass">Password</label><input type="password" name="password" id="pass" placeholder="Password" required>
             <button class="allButton" type="submit" value="submit">submit</button>
             <button class="allButton" type="reset" value="reset">reset</button>
+        </form>
+    </div>
+    <div class="item">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <input type="checkbox" id="checkboxone" name="checkboxone" value="checkboxone">
+            <label for="checkboxone"> checkboxone</label>
+            <input type="checkbox" id="checkboxtwo" name="checkboxtwo" value="checkboxtwo">
+            <label for="checkboxtwo"> checkboxtwo</label>
+            <div>
+                <button class="allButton" type="submit" value="submit">submit</button>
+                <button class="allButton" type="reset" value="reset">reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="item">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <input type="range" id="volume" name="volume" min="0" max="11" />
+            <label for="volume">Volume</label>
+            <div>
+                <button class="allButton" type="submit" value="submit">submit</button>
+                <button class="allButton" type="reset" value="reset">reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="item">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <input type="date" id="start" name="start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+            <div>
+                <button class="allButton" type="submit" value="submit">submit</button>
+                <button class="allButton" type="reset" value="reset">reset</button>
+            </div>
         </form>
     </div>
 </div>

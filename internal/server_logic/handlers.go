@@ -18,6 +18,10 @@ type Cred struct {
 	NotHiddenInput string
 	HiddenInput    string
 	FileInputSize  string
+	Checkboxone    string
+	Checkboxtwo    string
+	Volume         string
+	Start          string
 }
 
 func login(w http.ResponseWriter, r *http.Request) {
@@ -52,6 +56,10 @@ func proceed(w http.ResponseWriter, r *http.Request) {
 	selectinput := r.FormValue("selectinput")
 	nothiddeninput := r.FormValue("titlenothidden")
 	hiddeninput := r.FormValue("postId")
+	checkboxone := r.FormValue("checkboxone")
+	checkboxtwo := r.FormValue("checkboxtwo")
+	start := r.FormValue("start")
+	volume := r.FormValue("volume")
 	fileInput, handler, err = r.FormFile("file")
 	if err != nil {
 		if err == http.ErrMissingFile {
@@ -77,6 +85,10 @@ func proceed(w http.ResponseWriter, r *http.Request) {
 		FileInputSize:  fileSize,
 		NotHiddenInput: nothiddeninput,
 		HiddenInput:    hiddeninput,
+		Checkboxone:    checkboxone,
+		Checkboxtwo:    checkboxtwo,
+		Volume:         volume,
+		Start:          start,
 	}
 
 	if err = tmpl.ExecuteTemplate(w, "processor.html", cred); err != nil {

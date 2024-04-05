@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4f815bfa-08d0-466e-b6f8-1e32b84e4223" name="Changes" comment="add readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/server/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/internal/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/templates/processor.html" beforeDir="false" afterPath="$PROJECT_DIR$/internal/templates/processor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/templates/style_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/internal/static/style_login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/templates/style_processor.css" beforeDir="false" afterPath="$PROJECT_DIR$/internal/static/style_processor.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/server_logic/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/init_http.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/server_logic/init_http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/server_logic/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/server_logic/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/server_logic/init_http.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/server_logic/init_http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/static/style_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/internal/static/style_login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/internal/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/templates/processor.html" beforeDir="false" afterPath="$PROJECT_DIR$/internal/templates/processor.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +26,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../Program Files/Go" />
+  <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -54,7 +52,8 @@
     &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/misha/GolandProjects/web_dz4&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mishadyagilev/GolandProjects/web_dz4&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;

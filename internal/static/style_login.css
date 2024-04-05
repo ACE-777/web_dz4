@@ -24,6 +24,10 @@ body {
     width: 400px;
 }
 
+#user::placeholder {
+    color: hotpink;
+}
+
 .allButton{
     height: 20px;
     width: 60px;
